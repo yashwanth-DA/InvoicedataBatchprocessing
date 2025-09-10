@@ -1,0 +1,21 @@
+{
+	"name": "ds_sink_invoice",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_projectgen2yash",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Invoice",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

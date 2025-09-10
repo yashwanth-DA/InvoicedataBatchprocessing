@@ -1,0 +1,9 @@
+{
+	"name": "IR-Onprem-SQLserver",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"selfContainedInteractiveAuthoringEnabled": true
+		}
+	}
+}

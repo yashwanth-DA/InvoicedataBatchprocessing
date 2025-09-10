@@ -1,0 +1,20 @@
+{
+	"name": "ds_tablesmetadata_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_projectgen2yash",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "tablesmetadata",
+				"fileSystem": "metafile"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

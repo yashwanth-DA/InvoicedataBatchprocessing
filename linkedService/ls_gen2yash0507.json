@@ -1,0 +1,11 @@
+{
+	"name": "ls_gen2yash0507",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://gen2yash0507.dfs.core.windows.net/"
+		}
+	}
+}

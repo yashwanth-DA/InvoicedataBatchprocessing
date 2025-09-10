@@ -1,0 +1,24 @@
+{
+	"name": "ds_invoice_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_gen2yash0507",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "online_retail_invoice",
+				"fileSystem": "invoicedata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
