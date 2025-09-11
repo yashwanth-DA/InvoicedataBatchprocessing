@@ -55,6 +55,10 @@
 			"type": "string",
 			"defaultValue": "https://projectgen2yash.dfs.core.windows.net/"
 		},
+		"tr_Invoivedata_retailPOS_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/6ce53aa9-a02d-440e-a4e1-59a245744a9f/resourceGroups/rg-yash/providers/Microsoft.Storage/storageAccounts/gen2yash0507"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -117,6 +121,9 @@
 					},
 					"ls_SqlServer_df_properties_typeProperties_userName": {
 						"value": "[parameters('ls_SqlServer_df_properties_typeProperties_userName')]"
+					},
+					"tr_Invoivedata_retailPOS_properties_typeProperties_scope": {
+						"value": "[parameters('tr_Invoivedata_retailPOS_properties_typeProperties_scope')]"
 					}
 				}
 			},

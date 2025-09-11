@@ -41,6 +41,9 @@
 		"ls_projectgen2yash_properties_typeProperties_url": {
 			"value": "https://projectgen2yash.dfs.core.windows.net/"
 		},
+		"tr_Invoivedata_retailPOS_properties_typeProperties_scope": {
+			"value": "/subscriptions/6ce53aa9-a02d-440e-a4e1-59a245744a9f/resourceGroups/rg-yash/providers/Microsoft.Storage/storageAccounts/gen2yash0507"
+		},
 		"containerUri": {
 			"value": ""
 		},
