@@ -1,0 +1,126 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "dev-adf-projectyash"
+		},
+		"ls_Onprem_sql_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_Onprem_sql'"
+		},
+		"ls_SqlServer_df_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_SqlServer_df'"
+		},
+		"ls_azuredatabricks_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'ls_azuredatabricks'"
+		},
+		"ls_Onprem_sql_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-BEA2E83\\SQLEXPRESS"
+		},
+		"ls_Onprem_sql_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailPOS"
+		},
+		"ls_Onprem_sql_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"ls_SqlServer_df_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "DESKTOP-BEA2E83\\SQLEXPRESS"
+		},
+		"ls_SqlServer_df_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "RetailPOS"
+		},
+		"ls_SqlServer_df_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"ls_azuredatabricks_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0911-124821-d65h37h"
+		},
+		"ls_gen2yash0507_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://gen2yash0507.dfs.core.windows.net/"
+		},
+		"ls_projectgen2yash_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://projectgen2yash.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "dev-adf-projectyash_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_azuredatabricks_accessToken": {
+						"value": "[parameters('ls_azuredatabricks_accessToken')]"
+					},
+					"ls_Onprem_sql_password": {
+						"value": "[parameters('ls_Onprem_sql_password')]"
+					},
+					"ls_SqlServer_df_password": {
+						"value": "[parameters('ls_SqlServer_df_password')]"
+					},
+					"ls_azuredatabricks_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('ls_azuredatabricks_properties_typeProperties_existingClusterId')]"
+					},
+					"ls_gen2yash0507_properties_typeProperties_url": {
+						"value": "[parameters('ls_gen2yash0507_properties_typeProperties_url')]"
+					},
+					"ls_projectgen2yash_properties_typeProperties_url": {
+						"value": "[parameters('ls_projectgen2yash_properties_typeProperties_url')]"
+					},
+					"ls_Onprem_sql_properties_typeProperties_server": {
+						"value": "[parameters('ls_Onprem_sql_properties_typeProperties_server')]"
+					},
+					"ls_Onprem_sql_properties_typeProperties_database": {
+						"value": "[parameters('ls_Onprem_sql_properties_typeProperties_database')]"
+					},
+					"ls_Onprem_sql_properties_typeProperties_userName": {
+						"value": "[parameters('ls_Onprem_sql_properties_typeProperties_userName')]"
+					},
+					"ls_SqlServer_df_properties_typeProperties_server": {
+						"value": "[parameters('ls_SqlServer_df_properties_typeProperties_server')]"
+					},
+					"ls_SqlServer_df_properties_typeProperties_database": {
+						"value": "[parameters('ls_SqlServer_df_properties_typeProperties_database')]"
+					},
+					"ls_SqlServer_df_properties_typeProperties_userName": {
+						"value": "[parameters('ls_SqlServer_df_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

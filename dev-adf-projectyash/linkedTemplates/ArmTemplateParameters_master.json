@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dev-adf-projectyash"
+		},
+		"ls_Onprem_sql_password": {
+			"value": ""
+		},
+		"ls_SqlServer_df_password": {
+			"value": ""
+		},
+		"ls_azuredatabricks_accessToken": {
+			"value": ""
+		},
+		"ls_Onprem_sql_properties_typeProperties_server": {
+			"value": "DESKTOP-BEA2E83\\SQLEXPRESS"
+		},
+		"ls_Onprem_sql_properties_typeProperties_database": {
+			"value": "RetailPOS"
+		},
+		"ls_Onprem_sql_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"ls_SqlServer_df_properties_typeProperties_server": {
+			"value": "DESKTOP-BEA2E83\\SQLEXPRESS"
+		},
+		"ls_SqlServer_df_properties_typeProperties_database": {
+			"value": "RetailPOS"
+		},
+		"ls_SqlServer_df_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"ls_azuredatabricks_properties_typeProperties_existingClusterId": {
+			"value": "0911-124821-d65h37h"
+		},
+		"ls_gen2yash0507_properties_typeProperties_url": {
+			"value": "https://gen2yash0507.dfs.core.windows.net/"
+		},
+		"ls_projectgen2yash_properties_typeProperties_url": {
+			"value": "https://projectgen2yash.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
