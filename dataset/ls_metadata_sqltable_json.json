@@ -1,0 +1,29 @@
+{
+	"name": "ls_metadata_sqltable_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_projectgen2yash",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "sqltablesmetadat.json",
+				"fileSystem": "metafile"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"table_name": {
+					"type": "string"
+				},
+				"key_columns": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"name": "ls_invoice_bronze_folder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_projectgen2yash",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Invoice",
+				"fileSystem": "bronze"
+			}
+		}
+	}
+}
