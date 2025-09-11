@@ -1,0 +1,25 @@
+{
+	"name": "tr_Invoivedata_retailPOS",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_Invoice_data_master",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/invoicedata/blobs/online_retail_invoice/",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/6ce53aa9-a02d-440e-a4e1-59a245744a9f/resourceGroups/rg-yash/providers/Microsoft.Storage/storageAccounts/gen2yash0507",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
